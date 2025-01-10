@@ -8,6 +8,7 @@ async function getWeather(city) {
 
         const weatherData = await response.json();
         console.log(weatherData);
+        return weatherData;
  
     } catch(error) {
         console.log(error)

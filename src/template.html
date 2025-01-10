@@ -7,14 +7,19 @@
 </head>
 <body>
     <div class="content">
-        <div class="results">hey</div>
         <div class="search">
             <form id="myForm">
-                <label for="search">Enter a city:
+                <label for="search">Enter a City:
                     <input type="text" name="search" id="search" placeholder="Seattle" required>
                 </label>
                 <button type="submit" id="submit">Get Weather</button>
+                <div>
+                    <label for="radioToday">Today's Forecast: <input type="radio" name="forecast" id="radioToday" checked></label>
+                    <label for="radioFive">Five Day Forecast: <input type="radio" name="forecast" id="radioFive"></label>
+                </div>
             </form>   
+        </div>
+        <div class="results">
         </div>
     </div>
 </body>

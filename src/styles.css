@@ -1,11 +1,13 @@
 .content {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 5fr;
     height: 100vh;
     background-color: cadetblue;
 }
 
 .results {
+    display: flex;
+    justify-content: space-around;
     height: 100%;
     width: 100%;
     background-color: antiquewhite;
@@ -14,7 +16,7 @@
 .search {
     display: grid;
     justify-items: center;
-    margin-top: 10vh;
+    margin-top: 6vh;
 }
 
 .search label {
@@ -24,7 +26,9 @@
 input[type='text'] {
     line-height: 2;
     border-radius: 5px;
+    width: 25vw;
     border: 1px solid gray;
+    margin-bottom: 2vh;
 }
 
 button {
@@ -35,4 +39,31 @@ button {
 
 button:active {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.oneDayWeatherCard {
+    background-color: cadetblue;
+    height: 75vh;
+    width: 25vw;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 3vh;
+    margin-left: 3vw;
+}
+
+.oneDayWeatherCard img{
+    height: 15%;
+    margin-left: 30%;
+}
+
+.header {
+    font-size: 1.5rem;
+    margin-left: 10%;
+}
+
+.error {
+    color: red;
+    font-size: xx-large;
+    margin-top: 20%;
 }

@@ -1,13 +1,22 @@
 import './styles.css';
 import { getWeather } from './APIhandling';
+import { getTodayForecast, displayErrorMessage } from '../DOMhandling';
 
 //cache DOM
 const $search = document.getElementById('search');
-const $submitButton = document.getElementById('submit');
 const $myForm = document.getElementById('myForm');
+const $resultsDiv = document.querySelector('.results');
 
-$myForm.addEventListener('submit', (event) => {
+$myForm.addEventListener('submit', async (event) => {
     event.preventDefault();
-    let city = $search.value;
-    getWeather(city);
+    try {
+        $resultsDiv.innerHTML = '';
+        let city = $search.value;
+        let weatherData = await getWeather(city);
+        //if radio is today's forecast, get todays forecast() else get five day forecast()
+        getTodayForecast(weatherData, $resultsDiv);
+    } catch(error) {
+        console.log(error);
+        displayErrorMessage();
+    }
 })
