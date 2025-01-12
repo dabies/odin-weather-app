@@ -23,6 +23,10 @@
     font-size: 1.25rem;
 }
 
+.radio input {
+    margin-right: 2vw;
+}
+
 input[type='text'] {
     line-height: 2;
     border-radius: 5px;
@@ -52,9 +56,21 @@ button:active {
     margin-left: 3vw;
 }
 
-.oneDayWeatherCard img{
+.oneDayWeatherCard img,
+.fiveDayWeatherCard img {
     height: 15%;
     margin-left: 30%;
+}
+
+.fiveDayWeatherCard {
+    background-color: cadetblue;
+    height: 50vh;
+    width: 14vw;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 8vh;
+    margin-left: 2vw;
 }
 
 .header {
